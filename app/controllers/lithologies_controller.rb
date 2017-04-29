@@ -1,0 +1,2 @@
+class LithologiesController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class WellSymbolsController < ApplicationController
+end
