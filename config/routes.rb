@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-	resources :todos do
-		resources :items
+	resources :wells do
+		resources :depth_data
+		resources :descriptions
+		resources :lithologies
+		resources :mineralogies
+		resources :well_symbols
 	end
 end
