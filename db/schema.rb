@@ -86,9 +86,9 @@ ActiveRecord::Schema.define(version: 20170429162220) do
     t.date     "start_date"
     t.date     "end_date"
     t.decimal  "total_depth"
-    t.integer  "well_number"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "well_number"
   end
 
   add_foreign_key "depth_data", "wells"
