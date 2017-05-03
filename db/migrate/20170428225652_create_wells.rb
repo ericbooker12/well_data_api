@@ -5,6 +5,7 @@ class CreateWells < ActiveRecord::Migration[5.0]
       t.date :start_date
       t.date :end_date
       t.decimal :total_depth
+      t.integer :well_number
 
       t.timestamps
     end

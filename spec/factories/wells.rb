@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :well do
-    name { Faker::Superhero.name }
+    name { Faker::StarWars.character }
     start_date { Faker::Date.between(180.days.ago, Date.today) }
     end_date { Faker::Date.between(180.days.ago, Date.today) }
     total_depth { Faker::Number.number(4) }
@@ -10,12 +10,12 @@ end
 
 FactoryGirl.define do
   factory :depth_datum do
-		depth { Faker::Number.between(1, 5000) }
-		rop { Faker::Number.decimal(1)}
-		wob { Faker::Number.decimal(1)}
-		temp_in { Faker::Number.decimal(1)}
-		temp_out { Faker::Number.decimal(1)}
-		pressure { Faker::Number.decimal(1)}
-		well_id 2
+		depth '2000'
+		rop '30'
+		wob '15'
+		temp_in '80'
+		temp_out '99'
+		pressure '1500'
+		well_id 1
   end
 end

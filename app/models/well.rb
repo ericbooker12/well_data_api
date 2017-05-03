@@ -6,4 +6,5 @@ class Well < ApplicationRecord
 	has_many :well_symbols, dependent: :destroy
 
 	validates_presence_of :name, :well_number
+
 end

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+	get '/wells/well_data', to: 'wells#show_well'
+
 	resources :wells do
 		resources :depth_data
 		resources :descriptions
