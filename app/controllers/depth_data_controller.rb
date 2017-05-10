@@ -25,6 +25,13 @@ class DepthDataController < ApplicationController
 		head :no_content
 	end
 
+	def get_max_depth
+		# Bar.maximum("bar")
+		depth = DepthDatum.last.depth
+		p '*' * 50
+		json_response(depth)
+	end
+
 	private
 
 		def depth_datum_params

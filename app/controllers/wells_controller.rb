@@ -48,6 +48,14 @@ class WellsController < ApplicationController
 		end
 	end
 
+	def get_well_max_depth
+		well_num = params['well_num']
+		@well = Well.find_by( well_number: well_num )
+		if @well
+			json_response(@well)
+		end
+	end
+
 	private
 
 		def well_params

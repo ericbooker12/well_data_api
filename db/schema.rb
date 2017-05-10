@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170428232014) do
+ActiveRecord::Schema.define(version: 20170510212256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,21 +38,22 @@ ActiveRecord::Schema.define(version: 20170428232014) do
   end
 
   create_table "lithologies", force: :cascade do |t|
-    t.string   "depth"
-    t.float    "blank"
-    t.float    "cement"
-    t.float    "graywacke"
+    t.float    "depth"
+    t.float    "felsite"
+    t.float    "blueschist"
     t.float    "greenstone"
     t.float    "chert"
+    t.float    "peridotite"
     t.float    "mum"
-    t.float    "blueschist"
+    t.float    "silicic_graywacke"
+    t.float    "lithic_graywacke"
     t.float    "argillite"
     t.float    "serpentine"
     t.float    "clay"
-    t.float    "peridotite"
+    t.float    "blank"
     t.integer  "well_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.index ["well_id"], name: "index_lithologies_on_well_id", using: :btree
   end
 
