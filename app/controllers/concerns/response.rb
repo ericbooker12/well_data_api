@@ -4,4 +4,8 @@ module Response
 		render json: object, status: status
 	end
 
+	def avg_lith
+
+	end
+
 end

@@ -3,6 +3,7 @@ class LithologiesController < ApplicationController
 
 	def index
 		@lithologies = Lithology.all
+		p @Lithologies
 		json_response(@lithologies)
 	end
 

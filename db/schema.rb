@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170510212256) do
+ActiveRecord::Schema.define(version: 20170513201620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,14 +59,14 @@ ActiveRecord::Schema.define(version: 20170510212256) do
 
   create_table "mineralogies", force: :cascade do |t|
     t.float    "depth"
-    t.float    "quartz"
-    t.float    "calcite"
-    t.float    "pyrite"
-    t.float    "pyrrhotite"
-    t.float    "chloite"
-    t.float    "axinite"
-    t.float    "actinolite"
-    t.float    "tourmaline"
+    t.integer  "quartz"
+    t.integer  "calcite"
+    t.integer  "pyrite"
+    t.integer  "pyrrhotite"
+    t.integer  "chlorite"
+    t.integer  "axinite"
+    t.integer  "actinolite"
+    t.integer  "tourmaline"
     t.integer  "well_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

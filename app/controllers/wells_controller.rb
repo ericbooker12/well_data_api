@@ -10,14 +10,13 @@ class WellsController < ApplicationController
 		p "*" * 30
 		@well_num = params['well_num']
 		p "*" * 30
-		@wells = Well.all
+		wells = Well.all
 		@well_names = []
-		# wells.each do |well_name|
-		# 	@well_names.push(well_name.name)
-		# end
-		json_response(@wells)
+		wells.each do |well_name|
+			@well_names.push(well_name.name)
+		end
+		json_response(@well_names)
 	end
-
 
 	def create
 		@well = Well.create!(well_params)
