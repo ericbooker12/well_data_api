@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170513201620) do
+ActiveRecord::Schema.define(version: 20170517121436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,18 +59,28 @@ ActiveRecord::Schema.define(version: 20170513201620) do
 
   create_table "mineralogies", force: :cascade do |t|
     t.float    "depth"
-    t.integer  "quartz"
-    t.integer  "calcite"
-    t.integer  "pyrite"
-    t.integer  "pyrrhotite"
-    t.integer  "chlorite"
-    t.integer  "axinite"
-    t.integer  "actinolite"
-    t.integer  "tourmaline"
+    t.float    "quartz"
+    t.float    "calcite"
+    t.float    "pyrite"
+    t.float    "epidote"
+    t.float    "pyrrhotite"
+    t.float    "chlorite"
+    t.float    "axinite"
+    t.float    "actinolite"
+    t.float    "tourmaline"
     t.integer  "well_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["well_id"], name: "index_mineralogies_on_well_id", using: :btree
+  end
+
+  create_table "summary_descriptions", force: :cascade do |t|
+    t.float    "depth"
+    t.text     "content"
+    t.integer  "well_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["well_id"], name: "index_summary_descriptions_on_well_id", using: :btree
   end
 
   create_table "well_symbols", force: :cascade do |t|
@@ -96,5 +106,6 @@ ActiveRecord::Schema.define(version: 20170513201620) do
   add_foreign_key "descriptions", "wells"
   add_foreign_key "lithologies", "wells"
   add_foreign_key "mineralogies", "wells"
+  add_foreign_key "summary_descriptions", "wells"
   add_foreign_key "well_symbols", "wells"
 end

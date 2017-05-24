@@ -1,0 +1,5 @@
+200
+  losing 200bbls/hr
+
+245
+  building vol 20bbls/hr

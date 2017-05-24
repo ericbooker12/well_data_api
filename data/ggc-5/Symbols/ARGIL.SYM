@@ -1,0 +1,9 @@
+; CALPINE Geysers %lith symbol for Argillite
+0.08; Cell size
+C1
+D 0 0 1000 0 U
+D 0 333 1000 333 U
+D 0 666 1000 666 U
+C0
+D 0 0 1000 0 1000 1000 0 1000 F U
+

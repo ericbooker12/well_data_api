@@ -5,14 +5,17 @@ class CreateMineralogies < ActiveRecord::Migration[5.0]
       t.float :quartz
       t.float :calcite
       t.float :pyrite
+      t.float :epidote
       t.float :pyrrhotite
-      t.float :chloite
+      t.float :chlorite
       t.float :axinite
       t.float :actinolite
       t.float :tourmaline
+
       t.references :well, foreign_key: true
 
       t.timestamps
     end
   end
 end
+

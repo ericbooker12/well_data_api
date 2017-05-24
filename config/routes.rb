@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 		resources :lithologies
 		resources :mineralogies
 		resources :well_symbols
+		resources :summary_descriptions
 	end
 end

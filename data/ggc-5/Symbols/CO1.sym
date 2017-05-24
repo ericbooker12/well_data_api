@@ -1,0 +1,5 @@
+;orifice test symbol
+5
+COLOR 1
+D 400 1000 0 500 400 0 U
+

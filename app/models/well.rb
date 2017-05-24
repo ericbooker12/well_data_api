@@ -4,6 +4,7 @@ class Well < ApplicationRecord
 	has_many :lithologies, dependent: :destroy
 	has_many :mineralogies, dependent: :destroy
 	has_many :well_symbols, dependent: :destroy
+	has_many :summary_descriptions, dependent: :destroy
 
 	validates_presence_of :name, :well_number
 	validates :well_number, uniqueness: true

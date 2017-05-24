@@ -1,0 +1,16 @@
+Depth and Symbol
+
+296 case
+1175 case
+1388 case
+2867 case
+2999 case
+8332 case
+9296 case
+
+3181 ntry
+4880 ntry
+7636 ntry
+8862 ntry
+
+9407 trip
